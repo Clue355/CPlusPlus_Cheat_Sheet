@@ -43,6 +43,19 @@ int main() {
 ```
 In this example, the if statement checks whether number is greater than 0. If true, it prints that the number is positive. If not (else), it prints that the number is negative.
 
+```cpp
+if (condition1) {
+    // Code to execute if condition1 is true
+} else if (condition2) {
+    // Code to execute if condition1 is false but condition2 is true
+} else if (condition3) {
+    // Code to execute if both condition1 and condition2 are false but condition3 is true
+} else {
+    // Code to execute if none of the above conditions are true
+}
+```
+ In C++, else if statements are used when you have multiple conditions to check sequentially. After an initial if statement, you can use one or more else if blocks to test other conditions. If none of the conditions are met, an optional else block can be executed as the default case.
+
 ## Loops
 ```cpp
 #include <iostream>
