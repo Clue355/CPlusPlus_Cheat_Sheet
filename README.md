@@ -3,7 +3,9 @@ Here is everything I learned about C++
 ## Table of contents
 
 -   [Overview](#overview)
--   [My process](#my-process)
+-   [What I learned](#what-i-learned)
 -   [Author](#author)
 
 ## Overview
+
+## What I learned
