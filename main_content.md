@@ -41,6 +41,7 @@ int main() {
     return 0;
 }
 ```
+In this example, the if statement checks whether number is greater than 0. If true, it prints that the number is positive. If not (else), it prints that the number is negative.
 
 ## Loops
 ```cpp
@@ -54,7 +55,7 @@ int main() {
     return 0;
 }
 ```
-
+Here, the for loop starts with i at 0 and repeats the print statement until i is equal to 4 (for a total of 5 times). Each time through the loop, i is increased by 1 (i++).
 ## functions
 ```cpp
 #include <iostream>
@@ -71,3 +72,4 @@ int main() {
     return 0;
 }
 ```
+In this example, addNumbers is a function that takes two integers as input and returns their sum. We then call this function in main, store the result in result, and print it
