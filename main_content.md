@@ -227,3 +227,42 @@ Structs are particularly useful for grouping data together when you start workin
 
 - Efficiency: Arrays provide a way to store and access a sequence of data efficiently, especially when you know the size of the collection in advance.
 - Organization: Structs help in organizing data into meaningful groups, making your code more readable and manageable.
+
+```cpp
+#include <iostream>
+#include <string>
+using namespace std;
+
+// Step 1: Define the Struct
+struct Person {
+    string name;
+    int age;
+};
+
+int main() {
+    // Step 2: Declare an Array of Structs
+    Person people[3]; // Array to hold 3 persons
+
+    // Step 3: Initialize the Array
+    // Manually initializing each element of the array
+    people[0] = {"Alice", 30};
+    people[1] = {"Bob", 25};
+    people[2] = {"Charlie", 35};
+
+    // Step 4: Iterate Through the Array
+    for(int i = 0; i < 3; i++) {
+        // Accessing and printing each person's name and age
+        cout << people[i].name << " is " << people[i].age << " years old." << endl;
+    }
+
+    return 0;
+}
+```
+
+In this code:
+
+- A struct named Person is defined with name and age as its fields.
+- An array named people of type Person is declared to hold 3 Person structs.
+- The array is initialized with 3 Person objects, each representing a person with a name and age.
+- A loop iterates through the people array, accessing and printing the name and age of each Person.
+
