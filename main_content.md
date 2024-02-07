@@ -183,3 +183,47 @@ This is a multi-line comment
 that spans multiple lines.
 */
 ```
+
+## Arrays
+
+```cpp
+#include <iostream>
+using namespace std;
+
+int main() {
+    int myArray[5]; // Declares an array of 5 integers
+    return 0;
+}
+```
+You can initialize an array at the time of declaration:
+```cpp
+int myArray[5] = {1, 2, 3, 4, 5}; // Initialization
+```
+You access each element of the array using its index. Array indices start from 0.
+```cpp
+cout << myArray[0]; // Accesses the first element
+```
+To go through each element of the array, you can use a loop:
+```cpp
+for(int i = 0; i < 5; i++) {
+    cout << myArray[i] << " ";
+}
+```
+
+## Struct
+
+A struct (or structure) is a way to group variables of different types under a single name.
+```cpp
+struct Person {
+    string name;
+    int age;
+};
+
+Person person1;
+person1.name = "Alice";
+person1.age = 30;
+```
+Structs are particularly useful for grouping data together when you start working with more complex programs that require a way to manage different types of data as a single unit.
+
+- Efficiency: Arrays provide a way to store and access a sequence of data efficiently, especially when you know the size of the collection in advance.
+- Organization: Structs help in organizing data into meaningful groups, making your code more readable and manageable.
