@@ -1,12 +1,13 @@
 ## Basic Syntax
 ```cpp
 #include <iostream> // This includes the input/output library
+using namespace std; // This line tells the compiler to use the standard namespace
 
 int main() {
     int num1 = 5; // First number
     int num2 = 3; // Second number
     int sum = num1 + num2; // Add the numbers together
-    std::cout << "The sum is: " << sum << std::endl; // Print the result
+    cout << "The sum is: " << sum << endl; // Print the result
     return 0; // Tells the computer the program ran successfully
 }
 ```
@@ -28,14 +29,15 @@ std::cout << "The sum is: " << sum << std::endl;
 ## if-else statement
 ```cpp
 #include <iostream>
+using namespace std;
 
 int main() {
     int number = -5; // Let's say we have a number
 
     if (number > 0) {
-        std::cout << "The number is positive." << std::endl;
+        cout << "The number is positive." << endl;
     } else {
-        std::cout << "The number is negative." << std::endl;
+        cout << "The number is negative." << endl;
     }
 
     return 0;
@@ -59,10 +61,11 @@ if (condition1) {
 ## Loops
 ```cpp
 #include <iostream>
+using namespace std;
 
 int main() {
     for (int i = 0; i < 5; i++) {
-        std::cout << "This is a loop iteration." << std::endl;
+        cout << "This is a loop iteration." << endl;
     }
 
     return 0;
@@ -72,6 +75,7 @@ Here, the for loop starts with i at 0 and repeats the print statement until i is
 ## functions
 ```cpp
 #include <iostream>
+using namespace std;
 
 // Function declaration
 int addNumbers(int a, int b) {
@@ -80,9 +84,102 @@ int addNumbers(int a, int b) {
 
 int main() {
     int result = addNumbers(5, 3); // Call the function with 5 and 3 as arguments
-    std::cout << "The result is: " << result << std::endl; // Print the result
+    cout << "The result is: " << result << endl; // Print the result
 
     return 0;
 }
 ```
 In this example, addNumbers is a function that takes two integers as input and returns their sum. We then call this function in main, store the result in result, and print it
+
+```cpp
+#include <iostream>
+using namespace std;
+
+// Function declaration
+void greet() {
+    cout << "Hello, welcome to C++ functions!" << endl;
+}
+
+int main() {
+    greet(); // Function call
+    return 0;
+}
+```
+
+In this example, greet is a function that does not take any parameters and does not return any value (void return type). It simply prints a greeting message when called.
+
+```cpp
+void greet(string name) {
+    cout << "Hello, " << name << "! Welcome to C++ functions!" << endl;
+}
+//To call this function, you would pass the name as an argument:
+greet("Alice");
+
+```
+
+
+## Basic input and output
+
+```cpp
+int age;
+cout << "Enter your age: ";
+cin >> age; // Takes input from the user and stores it in the age variable
+```
+- Output: As seen before, cout is used for output.
+- Input: To get input from the user, we use cin followed by the >> operator and the variable name.
+
+```cpp
+#include <iostream>
+#include <string> // Include the string library to use the string type
+
+using namespace std;
+
+int main() {
+    string name; // Declare a string variable to store the user's name
+
+    cout << "Enter your name: ";
+    getline(cin, name); // Use getline to read a line of text into the name variable
+
+    cout << "Hello, " + name + "! Welcome to C++ programming." << endl;
+
+    return 0;
+}
+```
+
+```cpp
+#include <iostream>
+#include <string> // Include the string library
+
+using namespace std;
+
+int main() {
+    string firstName; // Variable to store the first name
+    string lastName;  // Variable to store the last name
+
+    cout << "Enter your first name: ";
+    getline(cin, firstName); // Reads the first name
+
+    // Ignore any characters left in the input buffer, up to and including the first newline
+    cin.ignore(numeric_limits<streamsize>::max(), '\n');
+
+    cout << "Enter your last name: ";
+    getline(cin, lastName); // Reads the last name
+
+    cout << "Hello, " << firstName << " " << lastName << "!" << endl;
+
+    return 0;
+}\
+```
+
+In this example, cin.ignore(numeric_limits<streamsize>::max(), '\n') is used to clear the input buffer, ensuring that any leftover characters, especially the newline character from the first input, do not interfere with the second getline() call. numeric_limits<streamsize>::max() specifies the maximum number of characters to ignore, and '\n' specifies that it should stop ignoring if it encounters a newline character.
+
+## Comments in C++
+
+```cpp
+// This is a single-line comment
+
+/*
+This is a multi-line comment
+that spans multiple lines.
+*/
+```
