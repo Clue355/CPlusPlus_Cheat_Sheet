@@ -72,6 +72,47 @@ int main() {
 }
 ```
 Here, the for loop starts with i at 0 and repeats the print statement until i is equal to 4 (for a total of 5 times). Each time through the loop, i is increased by 1 (i++).
+
+```cpp
+for (initialization; condition; increment/decrement) {
+    // Block of code to be executed
+}
+```
+The while loop repeats a block of code as long as a specified condition is true. It's useful when the number of iterations is not known before the loop starts.
+
+```cpp
+while (condition) {
+    // Block of code to be executed
+}
+```
+
+```cpp
+int i = 0;
+while (i < 5) {
+    cout << i << " ";
+    i++;
+}
+```
+The do-while loop is similar to the while loop, but it tests the condition after executing the loop's body. This means the loop's body will always be executed at least once.
+
+```cpp
+do {
+    // Block of code to be executed
+} while (condition);
+```
+```cpp
+int i = 0;
+do {
+    cout << i << " ";
+    i++;
+} while (i < 5);
+```
+- Use a for loop when the number of iterations is known.
+- Use a while loop when the number of iterations is not known, and you want to repeat based on a condition being true.
+- Use a do-while loop when the block of code needs to run at least once, but then may repeat based on a condition.
+
+
+
 ## functions
 ```cpp
 #include <iostream>
